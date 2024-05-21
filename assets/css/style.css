@@ -1,0 +1,209 @@
+/* &--------< Variables >-------- */
+:root {
+    /* !#### Colors #### */
+    --main-color: #FEC260;
+    --secondary-color: #3EA55C;
+    --border-color: #352E28;
+    --bg-color: #F7ECDE;
+    --btn-color: #D1512D;
+    --btn-hover: #BB4120;
+    --valid-input: #1987548c;
+    --invalid-input: #dc35468c;
+
+    --valid-border: #cea363;
+    --valid-box-shadow: #FEC26080;
+
+    /* !#### Fonts #### */
+    --main-font: "Pacifico", cursive;
+    --secondary-font: "PT Sans Caption", sans-serif;
+    --third-font: "Righteous", sans-serif;
+
+    /* !#### Animation #### */
+    animation-duration: 0.4s;
+}
+
+
+/* &--------< General Styles >-------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+
+body {
+    background-color: var(--bg-color, #F7ECDE);
+}
+
+h1 {
+    font-family: var(--main-font, "Pacifico", cursive);
+    font-weight: 400;
+}
+
+h3 {
+    font-family: var(--secondary-font, "PT Sans Caption", sans-serif);
+    font-weight: 400;
+}
+
+p {
+    font-family: var(--third-font, "Righteous", sans-serif);
+    font-weight: 400;
+}
+
+/* &--------< Main >-------- */
+.main-caption {
+    font-size: 50px;
+    font-weight: 500;
+    isolation: isolate;
+    position: relative;
+}
+
+.main-caption::before {
+    content: '';
+    height: 1.125rem;
+    width: 100%;
+    left: 0;
+    bottom: 0.625rem;
+    background-color: var(--main-color, #FEC260);
+    position: absolute;
+    transition: all var(--animation-duration, 0.4s);
+    z-index: -1;
+}
+
+.main-caption:hover::before {
+    height: 2.25rem;
+}
+
+.bookmark-body {
+    border-bottom: 2px dotted var(--border-color, #352e28);
+    border-top: 2px dotted var(--border-color, #352e28);
+    margin-top: 3rem;
+}
+
+.bookmark-caption {
+    font-family: "Righteous", sans-serif;
+    font-size: 1.5625rem;
+    font-weight: 500;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, var(--secondary-color, #3EA55C) 40%, var(--main-color, #a09846) 80%);
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-control {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.form-control:focus {
+    border: 1px solid var(--valid-border, #cea363);
+    box-shadow: 0 0 0 0.2rem var(--valid-box-shadow, #FEC26080);
+}
+
+.text-input {
+    position: relative;
+}
+
+.floating-icons {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.input-valid i {
+    box-shadow: 0.025rem 0 0 0.1rem var(--valid-input, #1987548c);
+    width: 16px;
+    height: 16px;
+    line-height: 10px;
+    display: inline-block;
+    border-radius: 100vh;
+}
+
+.input-invalid i{
+    box-shadow: 0 0 0 0.1rem var(--invalid-input, #dc35468c);
+    width: 16px;
+    height: 16px;
+    line-height: 10px;
+    display: inline-block;
+    border-radius: 100vh;
+}
+
+#validIconName {
+    display: none;
+}
+
+#invalidIconName {
+    display: none;
+}
+
+#validIconURL {
+    display: none;
+}
+
+#invalidIconURL {
+    display: none;
+}
+
+.btn-submit {
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
+    background-color: var(--btn-color);
+    color: white;
+    margin-bottom: 0.625rem;
+    transition: all var(--animation-duration, 0.4s);
+}
+
+.btn-submit:hover {
+    background-color: var(--btn-hover);
+    color: white;
+}
+
+.table {
+    margin-top: 1.875rem;
+    font-family: var(--secondary-font, "PT Sans Caption", sans-serif);
+}
+
+.table tr {
+    border-bottom: 0.0625rem solid  #352e2823;
+}
+
+.table tr th {
+    padding-block: 0.625rem;
+}
+
+.table tr td {
+    padding-block: 0.5rem;
+}
+
+
+.btn-visit{
+    background-color: #9eb23e;
+    color: white;
+}
+
+.btn-visit:hover{
+    background-color: #8a9e23;
+    border-color:#6e8018 ;
+    color: white;
+    transition: all var(--animation-duration, 0.4s);
+}
+
+.btn-delete{
+    background-color: #eb1d36;
+    color: white;
+}
+
+.btn-delete:hover{
+    background-color: #d30820;
+    border-color:#ba081d ;
+    color: white;
+    transition: all var(--animation-duration, 0.4s);
+}

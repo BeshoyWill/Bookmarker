@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+
+    <!-- ========> Google Fonts <======= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+
+    <!-- ========> Favicon <======= -->
+    <link rel="shortcut icon" href="assets/img/bookmark.png" type="image/x-icon">
+
+    <!-- ========> Font Awesome <======= -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- ========> Bootstrap Icons <======= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- ========> Bootstrap <======= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- ========> Custom CSS <======= -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="header py-5">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="main-caption py-2">Bookmarker</h1>
+
+            <div class="bookmark-body w-100 p-3">
+
+                <h3 class="bookmark-caption text-center mb-4">
+                    <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h3>
+
+                <label for="siteName" class="form-label fw-bold">
+                    <i class="fa-solid fa-book-bookmark me-1"></i> Site Name
+                </label>
+                <div class="text-input">
+                  <input type="text" name="site-name" id="siteName" placeholder="Bookmark Name" class="form-control mb-4">
+
+                  <div class="floating-icons">
+                    <span class="input-invalid text-danger">
+                      <i class="bi bi-exclamation-circle" id="invalidIconName"></i>
+                    </span>
+                    <span class="input-valid text-success">
+                      <i class="bi bi-check-circle" id="validIconName"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <label for="siteURL" class="form-label fw-bold">
+                    <i class="fa-solid fa-link me-1"></i> Site URL
+                </label>
+                <div class="text-input">
+                  <input type="url" name="site-link" id="siteURL" class="form-control mb-4" placeholder="Website URL">
+
+                  <div class="floating-icons">
+                    <span class="input-invalid text-danger">
+                      <i class="bi bi-exclamation-circle" id="invalidIconURL"></i>
+                    </span>
+                    <span class="input-valid text-success">
+                      <i class="bi bi-check-circle" id="validIconURL"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+        <table class="table text-center w-100 bg-light">
+            <thead class="mb-5">
+              <tr>
+                <th class="text-capitalize">index</th>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="myData">
+            </tbody>
+          </table>
+        </div>
+
+        <div class="container">
+          <div class="check-validity"></div>
+        </div>
+
+    </section>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
