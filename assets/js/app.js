@@ -119,6 +119,7 @@ function visitWebsite(index) {
 
 function deleteWebsite(index){
     bookMarkerList.splice(index, 1);
+    localStorage.setItem("bookmark", JSON.stringify(bookMarkerList));
     display();
 }
 
