@@ -75,7 +75,7 @@ function display() {
     for (var i = 0; i < bookMarkerList.length; i++) {
         tableRow += `
         <tr>
-            <td>${i}</td>
+            <td>${i+1}</td>
             <td>${bookMarkerList[i].name}</td>
             <td>
                 <button class="btn btn-visit" onclick="visitWebsite(${i})">
